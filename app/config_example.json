@@ -1,0 +1,51 @@
+{
+  "graphite": "localhost",
+  "dashboards": [
+    {
+      "name": "userEvents",
+      "title": "User Events",
+      "type": "addLineWithFocusGraph",
+      "metrics": [
+        {
+          "alias": "logins",
+          "metric": "averageSeries(summarize(stats.web*.events.user.logins%2C%2210min%22))"
+        },
+        {
+          "alias": "failed_logins",
+          "metric": "averageSeries(summarize(stats.web*.events.user.failed_logins%2C%2210min%22))"
+        },
+        {
+          "alias": "account_update",
+          "metric": "averageSeries(summarize(stats.web*.events.user.account_update%2C%2210min%22))"
+        }
+      ],
+      "from": null,
+      "to": null
+    },
+    {
+      "name": "createVisitTimers",
+      "title": "Create Visit Timers",
+      "type": "addStackedAreaChart",
+      "metrics": [
+        {
+          "alias": "find_index_for_visitor",
+          "metric": "stats.timers.VisitCreator.find_index_for_visitor.mean"
+        },
+        {
+          "alias": "ensure_index",
+          "metric": "stats.timers.VisitCreator.ensure_index.mean"
+        },
+        {
+          "alias": "create_visitor",
+          "metric": "stats.timers.VisitCreator.create_visitor.mean"
+        },
+        {
+          "alias": "create_visit",
+          "metric": "stats.timers.VisitCreator.create_visit.mean"
+        }
+      ],
+      "from": "-3h",
+      "to": null
+    }
+  ]
+}

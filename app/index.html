@@ -1,0 +1,47 @@
+<html><head>
+
+<link type="text/css" rel="stylesheet" href="/app/vendor/css/nv.d3.css">
+<link type="text/css" rel="stylesheet" href="/app/vendor/css/cubism.css">
+<link type="text/css" rel="stylesheet" href="/app/vendor/css/component.css">
+<link type="text/css" rel="stylesheet" href="/app/app.css">
+
+</head><body>
+
+<script type="text/x-handlebars">
+  <nav id="menu">
+    <h3>Onyx</h3>
+    {{#each cubisms}}
+      {{#link-to 'cubism' this.name tagName='a'}}{{this.title}}{{/link-to}}
+    {{/each}}
+    {{#each graphs}}
+      {{#link-to 'graph' this.name tagName='a'}}{{this.title}}{{/link-to}}
+    {{/each}}
+  </nav>
+
+  <div id="content">{{outlet}}</div>
+</script>
+
+<script type="text/x-handlebars" data-template-name="cubism">
+  <div class="loads" id="loads"></div>
+</script>
+
+<script type="text/x-handlebars" data-template-name="graph">
+  <div class="graph">
+    <h4>{{title}}</h4>
+    <svg />
+  </div>
+</script>
+
+<script type="text/javascript" src="/app/vendor/js/jquery.min.js"></script>
+
+<script type="text/javascript" src="/app/vendor/js/handlebars-1.1.2.js"></script>
+<script type="text/javascript" src="/app/vendor/js/ember-1.2.0.js"></script>
+
+<script type="text/javascript" src="/app/vendor/js/d3.v3.js"></script>
+<script type="text/javascript" src="/app/vendor/js/nv.d3.js"></script>
+<script type="text/javascript" src="/app/vendor/js/cubism.v1.js"></script>
+<script type="text/javascript" src="/app/vendor/js/highlight.min.js"></script>
+
+<script type="text/javascript" src="/app/app.js"></script>
+
+</body></html>

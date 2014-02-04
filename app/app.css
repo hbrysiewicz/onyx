@@ -1,0 +1,197 @@
+body {
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  width: 100%;
+  position: relative;
+}
+
+#content {
+  margin-left: 240px;
+}
+
+#loads, #graphs {
+  margin: 30px auto;
+  position: relative;
+}
+
+#loads {
+  width: 1200px;
+}
+
+#graphs {
+  width: 1252px;
+}
+
+.graph {
+  float: left;
+  padding: 20px;
+}
+
+header {
+  padding: 6px 0;
+}
+
+.group {
+  margin-bottom: 1em;
+}
+
+.axis {
+  font: 10px sans-serif;
+  position: fixed;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.axis text {
+  -webkit-transition: fill-opacity 250ms linear;
+}
+
+.axis path {
+  display: none;
+}
+
+.axis line {
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.axis.top {
+  background-image: linear-gradient(top, #fff 0%, rgba(255,255,255,0) 100%);
+  background-image: -o-linear-gradient(top, #fff 0%, rgba(255,255,255,0) 100%);
+  background-image: -moz-linear-gradient(top, #fff 0%, rgba(255,255,255,0) 100%);
+  background-image: -webkit-linear-gradient(top, #fff 0%, rgba(255,255,255,0) 100%);
+  background-image: -ms-linear-gradient(top, #fff 0%, rgba(255,255,255,0) 100%);
+  top: 0px;
+  padding: 0 0 24px 0;
+}
+
+.axis.bottom {
+  background-image: linear-gradient(bottom, #fff 0%, rgba(255,255,255,0) 100%);
+  background-image: -o-linear-gradient(bottom, #fff 0%, rgba(255,255,255,0) 100%);
+  background-image: -moz-linear-gradient(bottom, #fff 0%, rgba(255,255,255,0) 100%);
+  background-image: -webkit-linear-gradient(bottom, #fff 0%, rgba(255,255,255,0) 100%);
+  background-image: -ms-linear-gradient(bottom, #fff 0%, rgba(255,255,255,0) 100%);
+  bottom: 0px;
+  padding: 24px 0 0 0;
+}
+
+.horizon {
+  border-bottom: solid 1px #000;
+  overflow: hidden;
+  position: relative;
+}
+
+.horizon {
+  border-top: solid 1px #000;
+  border-bottom: solid 1px #000;
+}
+
+.horizon + .horizon {
+  border-top: none;
+}
+
+.horizon canvas {
+  display: block;
+}
+
+.horizon .title,
+.horizon .value {
+  bottom: 0;
+  line-height: 30px;
+  margin: 0 6px;
+  position: absolute;
+  text-shadow: 0 1px 0 rgba(255,255,255,.5);
+  white-space: nowrap;
+}
+
+.horizon .title {
+  left: 0;
+}
+
+.horizon .value {
+  right: 0;
+}
+
+.line {
+  background: #000;
+  opacity: .2;
+  z-index: 2;
+}
+
+@media all and (max-width: 1439px) {
+  body { margin: 0px auto; }
+  .axis { position: static; }
+  .axis.top, .axis.bottom { padding: 0; }
+}
+
+#open-menu {
+  position: absolute;
+  padding: 10px;
+  top: 40px;
+  left: 0px;
+  background-color: #cfccd5;
+}
+
+#open-menu:hover {
+  cursor: pointer;
+}
+
+#open-menu.active {
+  background: #555;
+  color: #afdefa;
+}
+
+.hidden {
+  display: none;
+}
+
+.nv-legendWrap {
+  margin-left: -30px;
+}
+
+#menu {
+  background: #555;
+  position: fixed;
+  width: 220px;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+#menu h3 {
+  color: #afdefa;
+  font-size: 1.9em;
+  padding: 20px;
+  margin: 0;
+  font-weight: 300;
+  background: #2f2f2f;
+}
+
+#menu a {
+  display: block;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 300;
+  border-bottom: 1px solid #cfccd5;
+  padding: 1em;
+}
+
+#menu a:hover {
+  background: #cfccd5;
+  text-decoration: none;
+}
+
+#menu a:active {
+  text-decoration: none;
+  background: #afdefa;
+  color: #47a3da;
+}
+
+#menu a.active {
+  background: #cfccd5;
+}
+
+.graph svg {
+  width: 1000px;
+  height: 523px;
+}
