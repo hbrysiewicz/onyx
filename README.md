@@ -31,7 +31,7 @@ The `cubism` property is an array of objects that define the metrics and informa
 They all must have the `type` of `cubism`.
 
 
-http://cl.ly/image/3W0m2g3o2H3B
+![demo](http://cl.ly/image/3W0m2g3o2H3B/Screen%20Shot%202014-01-31%20at%2012.23.06%20PM.png)
 
 
 The `graphs` property is an array of objects that define the metrics and information for a single NVD3 page.
@@ -57,4 +57,4 @@ __type:__ this is used to render the graph as line/lineWithFocus/stackedArea
 __metrics:__ is an array of metric objects and their aliases
 
 
-http://cl.ly/image/0p1W2X340z0Y
+![demo](http://cl.ly/image/0p1W2X340z0Y/Screen%20Shot%202014-01-31%20at%2012.23.39%20PM.png)
