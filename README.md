@@ -1,7 +1,7 @@
 onyx
 ====
 
-A dashboard app to visualize graphite data using Cubism.js and NVD3
+A dashboard app to visualize [Graphite](https://graphiteapp.org/) data using [Cubism.js](https://square.github.io/cubism/) and [NVD3](http://nvd3.org/)
 
 # Build Dependencies
 
